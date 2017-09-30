@@ -6,7 +6,7 @@ with open("warANDpeace.txt", "rb") as f:
 
 MISTRUTH_DEGREE = 0.5 # степень недоверия библиотеке pymorphy2 :)
 
-words = re.findall(r'[а-яА-Я-]{3,}', sourceText)
+words = re.findall(r'[ёа-яА-Я-]{3,}', sourceText)
 
 morph = pymorphy2.MorphAnalyzer()
 geoSet = set()
