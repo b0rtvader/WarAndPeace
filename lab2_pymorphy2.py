@@ -6,8 +6,6 @@ with open("warANDpeace.txt", "rb") as f:
 
 MISTRUTH_DEGREE = 0.5 # степень недоверия библиотеке pymorphy2 :)
 
-# регулярка выбирает такие слова, например: Москва, Москва-река, Франкфурт-на-Майне
-# географических названий более чем с двумя дефисами, наверное, нет)
 words = re.findall(r'[\w\-]{3,}', wordList)
 
 morph = pymorphy2.MorphAnalyzer()
