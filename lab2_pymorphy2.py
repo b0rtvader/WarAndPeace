@@ -8,7 +8,7 @@ MISTRUTH_DEGREE = 0.5 # степень недоверия библиотеке p
 
 # регулярка выбирает такие слова, например: Москва, Москва-река, Франкфурт-на-Майне
 # географических названий более чем с двумя дефисами, наверное, нет)
-words = re.findall(r'\w{3,100}|\w+\-\w+|\w+\-\w+\-\w+', wordList)
+words = re.findall(r'[\w\-]{3,}', wordList)
 
 morph = pymorphy2.MorphAnalyzer()
 geoSet = set()
