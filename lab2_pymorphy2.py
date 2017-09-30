@@ -2,11 +2,11 @@ import re
 import pymorphy2
 
 with open("warANDpeace.txt", "rb") as f: 
-	wordList = f.read().decode('utf8')
+	sourceText = f.read().decode('utf8')
 
 MISTRUTH_DEGREE = 0.5 # степень недоверия библиотеке pymorphy2 :)
 
-words = re.findall(r'[\w\-]{3,}', wordList)
+words = re.findall(r'[\w\-]{3,}', sourceText)
 
 morph = pymorphy2.MorphAnalyzer()
 geoSet = set()
