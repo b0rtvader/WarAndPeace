@@ -16,4 +16,4 @@ for word in words:
 	for p in parse:
 		if ('Geox' in p.tag) and (p.score > MISTRUTH_DEGREE):
 			geoSet.add(p.normal_form)
-print(geoSet)
+print(sorted(geoSet))
